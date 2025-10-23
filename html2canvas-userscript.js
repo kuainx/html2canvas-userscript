@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HTML2Canvas 网页元素转图像
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  在任意网站添加按钮，选择页面元素并生成图像
 // @author       KUAI
 // @match        *://*/*
@@ -61,7 +61,7 @@
                 align-items: center;
                 justify-content: space-between;
             ">
-                <span>HTML2PDF 工具</span>
+                <span>HTML2Canvas 工具</span>
                 <div style="
                     width: 40px;
                     height: 4px;
@@ -98,7 +98,7 @@
                 transition: all 0.2s ease;
                 margin-left:0;
                 text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            " disabled>生成PDF</button>
+            " disabled>生成图像</button>
             <button id="close-panel-btn" style="
                 width: 100%;
                 padding: 6px 12px;
@@ -151,7 +151,7 @@
                 font-size: 20px;
                 font-weight: bold;
                 text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-            ">PDF</div>
+            ">IMG</div>
             <div style="
                 position: absolute;
                 width: 100%;
@@ -465,7 +465,7 @@
           // 恢复按钮状态
           pdfBtn.textContent = originalText;
           pdfBtn.disabled = false;
-          alert('图像生成成功！');
+          // alert('图像生成成功！');
         })
         .catch(function (err) {
           console.log('creacterr', err);
@@ -560,7 +560,7 @@
       controlPanel.style.cursor = '';
     });
 
-    console.log('HTML2PDF 用户脚本已加载');
+    console.log('HTML2Canvas 用户脚本已加载');
   }
 
   // 启动脚本
