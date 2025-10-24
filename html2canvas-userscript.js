@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HTML2Canvas 网页元素转图像
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  在任意网站添加按钮，选择页面元素并生成图像
 // @author       KUAI
 // @match        *://*/*
@@ -33,6 +33,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            user-select: none;
         `;
 
     // 创建主面板内容（默认隐藏）
